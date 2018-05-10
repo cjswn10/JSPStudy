@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="result.jsp" method="post">
+	이름 : <input type="text"><br>
+	나이 : <input type="number"><br>
+	아이디 : <input type="text"><br>
+	암호 : <input type="password"><br>
+	이메일 : <input type="email"><br>
+	전화 : <input type="tel"><br>
+	성별: 
+	<input type="radio" name="gender">남자
+	<input type="radio" name="gender">여자<br>
+	취미 
+	<select>
+		<option>게임</option>
+		<option>축구</option>
+		<option>잠자기</option>
+		<option>마라톤</option>
+		<option>만화책읽기</option>
+	</select><br><br>
+	
+	취미 <br>
+	<select size=5>
+		<option>게임</option>
+		<option>축구</option>
+		<option>잠자기</option>
+		<option>마라톤</option>
+		<option>만화책읽기</option>
+	</select><br>
+	
+	좋아하는 음식
+	<input type="checkbox" name="food">치킨
+	<input type="checkbox" name="food">백숙
+	<input type="checkbox" name="food">케이크
+	<input type="checkbox" name="food">불백
+	<input type="checkbox" name="food">수박<br>
+	
+	자기소개 : <br>
+	<textarea rows="10" cols="60"></textarea>	
+	<!-- textarea사이에 엔터주면 글씨쓸때 중간부터 시작함 -->
+	<br><input type="submit" value="제출">
+	<input type="reset" value="취소">
+	</form>
+</body>
+</html>
