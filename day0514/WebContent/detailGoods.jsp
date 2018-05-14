@@ -18,7 +18,7 @@ GoodsVO g = dao.detailGoods(no);
 %>
 <table border="1" width="80%">
 <tr>
-<td><img src="<%=g.getFname()%>"></td>
+<td><img src="img/<%=g.getFname()%>"></td>
 <td>
 상품번호:<%=g.getNo() %><br>
 상품이름:<%=g.getItem() %><br>
