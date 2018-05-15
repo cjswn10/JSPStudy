@@ -17,7 +17,7 @@ MemberVO m = dao.getMember(id);
 %>
 <table border="1" width="80%">
 <tr>
-<td><img src="img/<%=m.getFname()%>"></td>
+<td><img src="img/<%=m.getFname()%>" width="200"></td>
 <td>
 아이디 : <%=m.getId() %><br>
 비밀번호 : <%=m.getPwd() %><br>

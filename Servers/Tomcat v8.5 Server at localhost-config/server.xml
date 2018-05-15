@@ -157,7 +157,11 @@
       <Context docBase="day0510" path="/day0510" reloadable="true" source="org.eclipse.jst.jee.server:day0510"/>
       <Context docBase="day0510a" path="/day0510a" reloadable="true" source="org.eclipse.jst.jee.server:day0510a"/>
       <Context docBase="day0511" path="/day0511" reloadable="true" source="org.eclipse.jst.jee.server:day0511"/>
-      <Context docBase="day0514" path="/day0514" reloadable="true" source="org.eclipse.jst.jee.server:day0514"/><Context docBase="memberTest" path="/memberTest" reloadable="true" source="org.eclipse.jst.jee.server:memberTest"/></Host>
+      <Context docBase="day0514" path="/day0514" reloadable="true" source="org.eclipse.jst.jee.server:day0514"/>
+      <Context docBase="memberTest" path="/memberTest" reloadable="true" source="org.eclipse.jst.jee.server:memberTest"/>
+      <Context docBase="day0515" path="/day0515" reloadable="true" source="org.eclipse.jst.jee.server:day0515"/>
+      <Context docBase="boardTest" path="/boardTest" reloadable="true" source="org.eclipse.jst.jee.server:boardTest"/>
+      <Context docBase="boardTest2" path="/boardTest2" reloadable="true" source="org.eclipse.jst.jee.server:boardTest2"/></Host>
     </Engine>
   </Service>
 </Server>

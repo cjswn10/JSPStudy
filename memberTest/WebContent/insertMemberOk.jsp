@@ -14,7 +14,7 @@
 <%
 	request.setCharacterEncoding("euc-kr");
 	String path = request.getRealPath("/img");
-	MultipartRequest multi = new MultipartRequest(request, path, "euc-kr");
+	MultipartRequest multi = new MultipartRequest(request, path, 1024*1024*5, "euc-kr");
 	
 	
 	MemberVO m = new MemberVO();
