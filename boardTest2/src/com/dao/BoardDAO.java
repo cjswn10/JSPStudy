@@ -37,7 +37,7 @@ public class BoardDAO {
 			pstmt.setString(2, b.getWriter());
 			pstmt.setString(3, b.getContent());
 			pstmt.setString(4, b.getFname());
-			pstmt.setString(5, b.getFsize());
+			pstmt.setInt(5, b.getFsize());
 			pstmt.setInt(6, b.getNo());
 			pstmt.setString(7, b.getPwd());
 			
@@ -88,7 +88,7 @@ public class BoardDAO {
 				b.setHit(rs.getInt(6));
 				b.setContent(rs.getString(7));
 				b.setFname(rs.getString(8));
-				b.setFsize(rs.getString(9));
+				b.setFsize(rs.getInt(9));
 			}
 			ConnectionProvider.close(rs, pstmt, conn);
 		} catch (Exception e) {
@@ -108,12 +108,11 @@ public class BoardDAO {
 			
 			while(rs.next()) {
 				list.add(new BoardVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),
-						rs.getDate(5), rs.getInt(6), rs.getString(7), rs.getString(8), rs.getString(9)));
+						rs.getDate(5), rs.getInt(6), rs.getString(7), rs.getString(8), rs.getInt(9)));
 			}
 			
-			
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println(e.getMessage());
 		}
 		return list;
 	}
@@ -134,7 +133,7 @@ public class BoardDAO {
 			pstmt.setString(4, b.getPwd());
 			pstmt.setString(5, b.getContent());
 			pstmt.setString(6, b.getFname());
-			pstmt.setString(7, b.getFsize());
+			pstmt.setInt(7, b.getFsize());
 			
 			re = pstmt.executeUpdate();
 			ConnectionProvider.close(null, pstmt, conn);

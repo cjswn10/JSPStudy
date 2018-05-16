@@ -21,10 +21,15 @@
 작성자 <%=b.getWriter() %><br>
 작성일 <%=b.getRegdate() %><br>
 조회수 <%=b.getHit() %><br>
-파일명 <%=b.getFname() %><br>
-파일크기 <%=b.getFsize() %><br>
 글내용 : <br>
-<textarea rows="10" cols="60" readonly="readonly"><%=b.getContent()%></textarea>
+<textarea rows="10" cols="60" readonly="readonly"><%=b.getContent()%></textarea><br>
+<%
+if(b.getFsize()>0){
+   %>
+   첨부파일 :<a href="file/<%=b.getFname()%>"> <%=b.getFname()%></a>(<%=b.getFsize()%>)
+   <%
+}
+%>
 <hr>
 <a href="listBoard.jsp">글목록</a>
 <a href="updateBoard.jsp?no=<%=b.getNo()%>">수정</a>

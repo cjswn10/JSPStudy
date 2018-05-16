@@ -23,9 +23,10 @@
 작성자 <input type="text" name="writer" value="<%=b.getWriter()%>"><br>
 비밀번호 <input type="password" name="pwd"><br>
 <textarea name="content" cols="60" rows="10"><%=b.getContent()%></textarea><br>
-첨부파일 <input type="file" name="fname" value="<%=b.getFname()%>"><br>
+첨부파일 : <%=b.getFname() %>(<%=b.getFsize() %>)<br>
+<input type="file" name="fname"><br>
 
-<input type="submit" value="등록">&nbsp;
+<input type="submit" value="수정">&nbsp;
 <input type="reset" value="취소">
 </form>
 </body>

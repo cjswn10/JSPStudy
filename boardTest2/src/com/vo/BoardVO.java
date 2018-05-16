@@ -11,7 +11,7 @@ public class BoardVO {
 	private int hit;
 	private String content;
 	private String fname;
-	private String fsize;
+	private int fsize;
 
 	public BoardVO() {
 		super();
@@ -19,7 +19,7 @@ public class BoardVO {
 	}
 
 	public BoardVO(int no, String title, String writer, String pwd, Date regdate, int hit, String content, String fname,
-			String fsize) {
+			int fsize) {
 		super();
 		this.no = no;
 		this.title = title;
@@ -40,11 +40,11 @@ public class BoardVO {
 		this.fname = fname;
 	}
 
-	public String getFsize() {
+	public int getFsize() {
 		return fsize;
 	}
 
-	public void setFsize(String fsize) {
+	public void setFsize(int fsize) {
 		this.fsize = fsize;
 	}
 

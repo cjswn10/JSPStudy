@@ -19,7 +19,7 @@
 	int no = Integer.parseInt(multi.getParameter("no"));
 	BoardDAO dao = new BoardDAO();
 	String oldFname = dao.getBoard(no, false).getFname();
-	String oldFsize = dao.getBoard(no, false).getFsize();
+	int oldFsize = dao.getBoard(no, false).getFsize();
 	
 	BoardVO b = new BoardVO();
 	b.setNo(Integer.parseInt(multi.getParameter("no")));
@@ -38,14 +38,13 @@
 	
 	if (fname != null && !fname.equals("")) { 
 		b.setFname(fname);
-		b.setFsize(multi.getFile("fname").length()+"byte");
+		b.setFsize((int)multi.getFile("fname").length());
 	}
-	
 	
 	int re = dao.updateBoard(b);
 	
 	if(re > 0) {
-		if (fname != null && !fname.equals("")) {
+		if (fname != null && !fname.equals("") && oldFsize > 0) {
 			File file = new File(path + "/" + oldFname);
 			file.delete();
 		}

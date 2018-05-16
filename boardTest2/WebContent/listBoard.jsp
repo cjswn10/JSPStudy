@@ -28,8 +28,12 @@
 		for(BoardVO b : list) {
 			out.print("<tr>");
 			out.print("<td>"+b.getNo()+"</td>");
-			out.print("<td><a href='detailBoard.jsp?no="+b.getNo()+"'>"+b.getTitle()+"</a></td>");
-			out.print("<td>"+b.getWriter()+"</td>");
+			out.print("<td><a href='detailBoard.jsp?no="+b.getNo()+"'>"+b.getTitle()+"</a>");
+			
+			if(b.getFsize() > 0)
+				out.print("<img src='file.png'>");
+			
+			out.print("</td><td>"+b.getWriter()+"</td>");
 			out.print("<td>"+b.getRegdate()+"</td>");
 			out.print("<td>"+b.getHit()+"</td>");
 			out.print("<td>"+b.getFname()+"</td>");
