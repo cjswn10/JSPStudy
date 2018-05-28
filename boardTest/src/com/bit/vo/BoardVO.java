@@ -1,22 +1,24 @@
-package com.vo;
-
-import java.util.Date;
+package com.bit.vo;
 
 public class BoardVO {
 	private int no;
 	private String title;
 	private String writer;
 	private String pwd;
-	private Date regdate;
+	private String regdate;
 	private int hit;
 	private String content;
+	private String fname;
+	private int fsize;
+	private String ip;
 
 	public BoardVO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public BoardVO(int no, String title, String writer, String pwd, Date regdate, int hit, String content) {
+	public BoardVO(int no, String title, String writer, String pwd, String regdate, int hit, String content,
+			String fname, int fsize, String ip) {
 		super();
 		this.no = no;
 		this.title = title;
@@ -25,14 +27,9 @@ public class BoardVO {
 		this.regdate = regdate;
 		this.hit = hit;
 		this.content = content;
-	}
-
-	public String getPwd() {
-		return pwd;
-	}
-
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+		this.fname = fname;
+		this.fsize = fsize;
+		this.ip = ip;
 	}
 
 	public int getNo() {
@@ -59,11 +56,19 @@ public class BoardVO {
 		this.writer = writer;
 	}
 
-	public Date getRegdate() {
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+	public String getRegdate() {
 		return regdate;
 	}
 
-	public void setRegdate(Date regdate) {
+	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
 
@@ -81,6 +86,30 @@ public class BoardVO {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public int getFsize() {
+		return fsize;
+	}
+
+	public void setFsize(int fsize) {
+		this.fsize = fsize;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
 	}
 
 }

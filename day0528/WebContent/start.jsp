@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>Book</title>
 </head>
 <body>
-${msg }
-<hr>
-<a href="listBoard.do">게시물 목록</a>
+<a href="listBook.do">상품목록</a>
 </body>
 </html>

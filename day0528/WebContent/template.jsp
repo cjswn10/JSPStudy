@@ -7,8 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-${msg }
-<hr>
-<a href="listBoard.do">게시물 목록</a>
+	<table border="1" width="100%">
+		<tr>
+			<td colspan="2"><jsp:include page="top.jsp"/></td>
+		</tr>
+		<tr>
+			<td><jsp:include page="left.jsp"/></td>
+			<td><jsp:include page="${viewPage}"/></td>
+		</tr>
+		<tr>
+			<td colspan="2"><jsp:include page="bottom.jsp"/></td>
+		</tr>
+	</table>
 </body>
 </html>

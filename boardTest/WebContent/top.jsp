@@ -7,8 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-${msg }
-<hr>
-<a href="listBoard.do">게시물 목록</a>
+	<table align="center">
+		<tr>
+			<td><img src="pooh.jpg" height="100"></td>
+			<td><h1>연두 게시판</h1></td>
+		</tr>
+	</table>
 </body>
 </html>

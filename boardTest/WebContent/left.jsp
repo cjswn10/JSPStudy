@@ -7,8 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-${msg }
-<hr>
-<a href="listBoard.do">게시물 목록</a>
+	<a href="insertBoard.do">게시물 등록</a><br><br><br><br>
+	<a href="listBoard.do">게시판 목록</a>
 </body>
 </html>

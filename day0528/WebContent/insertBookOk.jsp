@@ -9,6 +9,6 @@
 <body>
 ${msg }
 <hr>
-<a href="listBoard.do">게시물 목록</a>
+<a href="listBook.do">도서 목록</a>
 </body>
 </html>

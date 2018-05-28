@@ -7,8 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-${msg }
-<hr>
-<a href="listBoard.do">게시물 목록</a>
+START!!
+<a href="listBoard.do">연주게시판 바로가기</a>
 </body>
 </html>
