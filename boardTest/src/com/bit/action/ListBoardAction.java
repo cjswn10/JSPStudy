@@ -26,6 +26,14 @@ public class ListBoardAction implements Action {
 		request.setAttribute("list", list);
 		request.setAttribute("totalPage", dao.totalPage);
 		
+		int startPage = (pageNUM+dao.pageGroup-1)/dao.pageGroup*dao.pageGroup - (dao.pageGroup - 1);
+		int endPage = startPage + dao.pageGroup - 1;
+	    if(endPage > dao.totalPage)
+	        endPage = dao.totalPage;
+	      
+		request.setAttribute("startPage", startPage);
+		request.setAttribute("endPage", endPage);
+		
 		return "listBoard.jsp";
 	}
 

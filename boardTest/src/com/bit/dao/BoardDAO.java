@@ -10,12 +10,13 @@ import com.bit.db.ConnectionProvider;
 import com.bit.vo.BoardVO;
 
 public class BoardDAO {
-	public static int pageSIZE = 10;
+	public static int pageSIZE = 5;
 	//한 화면에 보여줄 레코드의 수
 	public static int totalRecord=0;
 	//전체 레코드의 수를 저장할 변수
 	public static int totalPage = 1;
 	//전체 페이지 수를 저장할 변수
+	public static int pageGroup = 5;
 	
 	public int getCount() {
 		int cnt = 0;
@@ -68,9 +69,6 @@ public class BoardDAO {
 		
 		start = (pageNUM-1)*pageSIZE +1;
 		end = start+pageSIZE-1;
-		
-		System.out.println(start);
-		System.out.println(end);
 		
 		if(end > totalRecord)
 			end = totalRecord;

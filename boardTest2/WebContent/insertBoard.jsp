@@ -4,20 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>게시물 등록</title>
+<title>Insert title here</title>
 </head>
 <body>
-<h2>게시물 등록</h2>
-<hr>
-<form action="insertBoardOk.jsp" method="post" enctype="multipart/form-data">
-제목 <input type="text" name="title"><br>
-작성자 <input type="text" name="writer"><br>
-비밀번호 <input type="password" name="pwd"><br>
-<textarea name="content" cols="60" rows="10"></textarea><br>
-첨부파일 <input type="file" name="fname"><br>
-
-<input type="submit" value="등록">&nbsp;
-<input type="reset" value="취소">
+	<h2>${title }</h2>
+	<hr>
+<form action="insertBoardOk.do" method="post" enctype="multipart/form-data">
+<input type="hidden" name="no" value="${no }">
+제목  : <input type="text" name="title"><br>
+작성자 : <input type="text" name="writer"><br>
+비밀번호 : <input type="password" name="pwd"><br>
+내용 : <br><textarea rows="10" cols="60" name="content"></textarea><br>
+첨부파일 : <input type="file" name="fname"><br>
+<input type="submit" value="등록">
 </form>
 </body>
 </html>

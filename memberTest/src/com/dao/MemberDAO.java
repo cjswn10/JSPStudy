@@ -15,7 +15,6 @@ import oracle.net.aso.e;
 public class MemberDAO {
 	
 	public int deleteMember(String id) {
-		
 		int re = -1;
 		String sql = "DELETE member WHERE id=?";
 		
@@ -27,19 +26,11 @@ public class MemberDAO {
 			re = pstmt.executeUpdate();
 			
 			ConnectionProvider.close(null, pstmt, conn);
-			
-			
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e.getMessage());
 		}
-		
-		
-		
 		return re;
-		
-		
-		
 	}
 
 	
@@ -71,9 +62,7 @@ public class MemberDAO {
 			// TODO: handle exception
 			System.out.println(e.getMessage());
 		}
-
 		return re;
-
 	}
 
 	public int insertMember(MemberVO m) {
@@ -81,7 +70,6 @@ public class MemberDAO {
 		String sql = "INSERT INTO member VALUES(?,?,?,?,?,?,?,?,?)";
 
 		try {
-
 			Connection conn = ConnectionProvider.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, m.getId());
@@ -96,11 +84,9 @@ public class MemberDAO {
 
 			re = pstmt.executeUpdate();
 			ConnectionProvider.close(null, pstmt, conn);
-
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-
 		return re;
 	}
 

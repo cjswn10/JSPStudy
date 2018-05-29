@@ -4,17 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>게시물 삭제</title>
+<title>Insert title here</title>
 </head>
 <body>
 <h2>게시물 삭제</h2>
-<%
-	int no = Integer.parseInt(request.getParameter("no"));
-%>
-<form action="deleteBoardOk.jsp" method="POST">
-	<input type="hidden" name="no" value="<%=no%>">
-	비밀번호<input type="password" name="pwd">
-	<input type="submit" value="삭제">
-</form>
+<hr>
+
+<form action="deleteBoardOk.do" method="post">
+게시물 번호 : ${no} <input type="hidden" name="no" value="${no}"><br>
+암호 : <input type="password" name="pwd"><br>
+
+<input type="submit" value="삭제">
+</form> 
 </body>
 </html>

@@ -29,9 +29,17 @@
 		</c:forEach>
 	</table>
 	<hr>
-	<c:forEach var="i" begin="1" end="${totalPage}">
-		<a href="listBoard.do?pageNUM=${i}">${i}</a>&nbsp;
+	<c:if test="${startPage>1}">
+		<a href="listBoard.do?pageNUM=${startPage-1}">[이전]</a>
+	</c:if>
 	
+	<c:forEach var="i" begin="${startPage}" end="${endPage}">
+		<a href="listBoard.do?pageNUM=${i}">${i}</a>&nbsp;
 	</c:forEach>
+	
+	<c:if test="${endPage<totalPage}">
+		<a href="listBoard.do?pageNUM=${endPage+1}">[다음]</a>
+	</c:if>
+	
 </body>
 </html>
